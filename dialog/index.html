@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        ul li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+        .todo__item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:10px;
+        }
+        i {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .todo__item:hover {
+            background-color: bisque;
+        }
+        .dialog {
+            position: relative;
+            
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main id="app">
+        <h1>{{message}}</h1>
+        <hr/>
+        
+        <ul>
+            <li>
+                <div class="todo__item" v-for="(todo,index) in [1,2,3]" @mouseover="() => hoverMenu[index] = true" @mouseleave="() => hoverMenu[index] = false">
+                    <div class="todo__item__checkbox">
+                        <input type="checkbox" id="todo1" name="todo1">
+                        <label for="todo1">Task 1</label>
+                    </div>
+                    <div class="todo__item__hover_menu" v-if="hoverMenu[index]">
+                        <i class="fa-solid fa-user fa-lg"></i>
+                        <i class="fa-regular fa-comment-dots fa-lg" @click="() => openDialog[index] = !openDialog[index]"></i>
+                        <dialog class=".dialog" :open="openDialog[index]">
+                            This is an open dialog window
+                            <button @click="() => openDialog[index] = !openDialog[index]">Close</button>
+                        </dialog>
+                        
+                    </div>
+                    
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script src="https://kit.fontawesome.com/6f6c4baace.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+
+        createApp({
+            setup() {
+                const message = ref('Dialog!')
+                const openDialog = ref({})
+                const hoverMenu = ref({})
+                return {
+                    message, openDialog, hoverMenu
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
