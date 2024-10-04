@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic-form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: gainsboro;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        button, input, select {
+            min-height: 30px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: grey;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Person</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"/>
+            <label for="age">Age</label>
+            <input type="number" min="0" max="100" id="age"/>
+            <label for="age-group">Age Group</label>
+            <select>
+                <option disabled>Please Select</option>
+                <optgroup label="number">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </optgroup>
+                <optgroup label="alphabet">
+                    <option>a</option>
+                    <option>b</option>
+                    <option>c</option>
+                    <option>d</option>
+                </optgroup>
+            </select>
+            <div style="display: block; margin-top: 5px;">
+                <button type="submit">Save</button>
+                <button type="submit">Reset</button>
+            </div>
+            
+        </fieldset>
+        
+        
+    </form>
+</body>
+</html>
