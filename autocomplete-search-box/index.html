@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autocomplete-searchbox</title>
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        .autocomplete {
+            border: 1px solid gray;
+            width: 200px;
+        }
+
+        .autocomplete-items {
+            margin: 5px 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .autocomplete-items:hover {
+            cursor: pointer;
+            background-color: #ccc;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .flex-div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>autocomplete search box</h1>
+    <hr/>
+    
+    <div class="flex-div">
+        <div class="autocomplete">
+            <input type="text" placeholder="Search ...">
+            <div class="autocomplete-items">Item One</div>
+            <div class="autocomplete-items">Item Two</div>
+            <div class="autocomplete-items">Item Three</div>
+            <div class="autocomplete-items">Item Four</div>
+        </div>
+        
+        <div class="autocomplete">
+            <input type="text" placeholder="Search ...">
+            <div class="autocomplete-items">Item One</div>
+            <div class="autocomplete-items">Item Two</div>
+            <div class="autocomplete-items">Item Three</div>
+            <div class="autocomplete-items">Item Four</div>
+        </div>
+    </div>
+</body>
+</html>
