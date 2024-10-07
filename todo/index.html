@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo!</title>
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        input {
+            height: 30px;
+        }
+
+        #todo__form {
+
+        }
+        
+        #todo__result {
+            margin-top: 30px;
+        }
+
+        ul li {
+            list-style: circle;
+        }
+
+        .line__items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .line__item {
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            flex-direction: row;
+            padding: 5px;
+            text-align: left;
+            min-width: 600px;
+        }
+
+        .line__item__actions {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .dropdown-icon:hover {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .dropdown-content {
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+            display: none;
+            position: absolute;
+        }
+
+        .dropdown-content a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-icon:hover + .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Todo!</h1>
+    <hr/>
+    <section id="todo">
+        <div id="todo__form">
+            <input type="date" />
+            <input type="text" placeholder="description"/>
+        </div>
+        <div id="todo__result">
+            <strong>Todo Result</strong>
+            <ul>
+                <li>
+                    <p>15/05/2000</p>
+                    <div class="line__items">
+                        <div class="line__item">
+                            <input type="checkbox">
+                            <span>Item's description need to be here</span>
+                            <div class="line__item__actions">
+                                <i>a</i>
+                                <i>b</i>
+                                <div>
+                                    <i class="dropdown-icon" style="border-bottom: 2px dotted black;">c</i>
+                                    <div class="dropdown-content">
+                                        <a href="#">one</a>
+                                        <a href="#">two</a>
+                                        <a href="#">three</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="line__item">
+                            <input type="checkbox">
+                            <span>Item's description need to be here</span>
+                            <div class="line__item__actions">
+                                <i>a</i>
+                                <i>b</i>
+                                <div>
+                                    <i class="dropdown-icon" style="border-bottom: 2px dotted black;">c</i>
+                                    <div class="dropdown-content">
+                                        <a href="#">one</a>
+                                        <a href="#">two</a>
+                                        <a href="#">three</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p>16/05/2000</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
