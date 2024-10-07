@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        .table {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-around;
+            border-bottom: 1px solid black;
+            min-height: 30px;
+        }
+
+        .row:last-child {
+            border-bottom: none;
+        }
+        
+        .column {
+            text-align: left;
+            border-right: 1px solid black;
+            padding: 10px;
+            flex: 1;
+        }
+        
+        .column:last-child {
+            border-right: none;
+        }
+        
+        .action {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .dropdown-box {}
+
+        .dropdown-box-icon {}
+
+        .dropdown-box-icon:hover {
+            border: 1px solid gray;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        .dropdown-box-content {
+            display: none;
+            background-color: white;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+        .dropdown-box-content a {
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-box-icon:hover + .dropdown-box-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Todo</h1>
+    <hr/>
+    <div class="table">
+        <div class="row">
+            <div class="column">todo description</div>
+            <div class="column">tags</div>
+            <div class="column">
+                <div class="action">
+                    <div>&#8593;</div>
+                    <div>&#169;</div>
+                    <div class="dropdown-box">
+                        <i class="dropdown-box-icon">&#8595;</i>
+                        <div class="dropdown-box-content">
+                            <a href="#">item-1</a>
+                            <a href="#">item-1</a>
+                            <a href="#">item-1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">extrra extra col</div>
+        </div>
+        <div class="row">
+            <div class="column">todo description</div>
+            <div class="column">tags</div>
+            <div class="column">
+                <div class="action">
+                    <div>&#8593;</div>
+                    <div>&#169;</div>
+                    <div class="dropdown-box">
+                        <i class="dropdown-box-icon">&#8595;</i>
+                        <div class="dropdown-box-content">
+                            <a href="#">item-1</a>
+                            <a href="#">item-1</a>
+                            <a href="#">item-1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">extra col</div>
+        </div>
+    </div>
+</body>
+</html>
