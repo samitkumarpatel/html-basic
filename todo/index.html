@@ -23,8 +23,8 @@
             margin-top: 30px;
         }
 
-        ul li {
-            list-style: circle;
+        p {
+            text-shadow: 1px 1px 2px black;
         }
 
         .line__items {
@@ -34,15 +34,14 @@
         }
 
         .line__item {
-            border-top: 1px solid grey;
-            border-bottom: 1px solid grey;
+            border: 1px solid grey;
+            border-radius: 8px;
             display: flex;
-            gap: 10px;
+            gap: 5px;
             justify-content: space-around;
             flex-direction: row;
             padding: 5px;
-            text-align: left;
-            min-width: 600px;
+            width: 600px;
         }
 
         .line__item__actions {
@@ -51,7 +50,7 @@
             gap: 20px;
         }
 
-        .dropdown-icon:hover {
+        .dropdown-icon:hover , .icon:hover{
             cursor: pointer;
             font-weight: bold;
             font-size: 30px;
@@ -60,6 +59,7 @@
         .dropdown-content {
             padding: 10px;
             border: 1px solid black;
+            border-radius: 5px;
             background-color: white;
             display: none;
             position: absolute;
@@ -86,49 +86,45 @@
         </div>
         <div id="todo__result">
             <strong>Todo Result</strong>
-            <ul>
-                <li>
-                    <p>15/05/2000</p>
-                    <div class="line__items">
-                        <div class="line__item">
-                            <input type="checkbox">
-                            <span>Item's description need to be here</span>
-                            <div class="line__item__actions">
-                                <i>a</i>
-                                <i>b</i>
-                                <div>
-                                    <i class="dropdown-icon" style="border-bottom: 2px dotted black;">c</i>
-                                    <div class="dropdown-content">
-                                        <a href="#">one</a>
-                                        <a href="#">two</a>
-                                        <a href="#">three</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="line__item">
-                            <input type="checkbox">
-                            <span>Item's description need to be here</span>
-                            <div class="line__item__actions">
-                                <i>a</i>
-                                <i>b</i>
-                                <div>
-                                    <i class="dropdown-icon" style="border-bottom: 2px dotted black;">c</i>
-                                    <div class="dropdown-content">
-                                        <a href="#">one</a>
-                                        <a href="#">two</a>
-                                        <a href="#">three</a>
-                                    </div>
+            <div class="group__container">
+                <p>15/05/2000</p>
+                <div class="line__items">
+                    <div class="line__item">
+                        <input type="checkbox">
+                        <span>Item's description need to be here</span>
+                        <div class="line__item__actions">
+                            <span class="icon">&#9921;</span>
+                            <span class="icon">&#9935;</span>
+                            <div>
+                                <span class="dropdown-icon" style="border-bottom: 2px dotted black;">&#9839;</span>
+                                <div class="dropdown-content">
+                                    <a href="#">one</a>
+                                    <a href="#">two</a>
+                                    <a href="#">three</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <p>16/05/2000</p>
-                </li>
-            </ul>
+
+                    <div class="line__item">
+                        <input type="checkbox">
+                        <span>Item's description need to be here</span>
+                        <div class="line__item__actions">
+                            <span class="icon">&#9921;</span>
+                            <span class="icon">&#9935;</span>
+                            <div>
+                                <span class="dropdown-icon" style="border-bottom: 2px dotted black;">&#9839;</span>
+                                <div class="dropdown-content">
+                                    <a href="#">one</a>
+                                    <a href="#">two</a>
+                                    <a href="#">three</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </body>
